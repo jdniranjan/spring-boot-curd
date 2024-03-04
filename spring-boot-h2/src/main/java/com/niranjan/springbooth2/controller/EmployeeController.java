@@ -23,9 +23,10 @@ public class EmployeeController {
 
     @GetMapping("get")
     public ResponseEntity<List<Employee>> getAllEmployees(){
+        System.out.println("+++++++++++");
        return new ResponseEntity<>(employeeRepository.findAll(), HttpStatusCode.valueOf(233));
 
-    }
+   }
 
 
     @GetMapping("/getEmployee/{id}")
